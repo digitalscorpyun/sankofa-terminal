@@ -1,0 +1,8 @@
+name: Sankofa Integrity Check  
+on: [push]  
+jobs:  
+  audit:  
+    runs-on: ubuntu-latest  
+    steps:  
+      - name: Ensure Adinkra Symbols  
+        run: grep -q '𓃒' sankofa.theme  
